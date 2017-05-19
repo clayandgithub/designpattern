@@ -8,7 +8,16 @@ import com.sun.javaws.exceptions.InvalidArgumentException;
  * @E-mail clayanddev@163.com
  */
 public class BlizzardGameFactory {
-    Game createGameByName(String gameName) {
+
+    public static Game createDiablo() {
+        return new Diablo();
+    }
+
+    public static Game createOverWatch() {
+        return new OverWatch();
+    }
+
+    public Game createGameByName(String gameName) {
         Game ret = null;
         switch (gameName) {
             case "Diablo":
