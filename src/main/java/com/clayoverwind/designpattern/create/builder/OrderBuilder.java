@@ -6,19 +6,56 @@ package com.clayoverwind.designpattern.create.builder;
  * @E-mail clayanddev@163.com
  */
 public class OrderBuilder {
-    public static Order buildPackageA(int count) {
-        Order order = new Order();
-        order.setDrink("coffee");
-        order.setFood("cookie");
-        order.setCount(count);
-        return order;
+    // Required parameters
+    private String food;
+
+    private String drink;
+
+    private Integer count;
+
+    // Optional parameters - initialized to default values
+    private Boolean spicy = false;
+
+    private Boolean cooled = false;
+
+
+    public String getFood() {
+        return food;
     }
 
-    public static Order buildPackageB(int count) {
-        Order order = new Order();
-        order.setDrink("beer");
-        order.setFood("bread");
-        order.setCount(count);
-        return order;
+    public String getDrink() {
+        return drink;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public Boolean getSpicy() {
+        return spicy;
+    }
+
+    public Boolean getCooled() {
+        return cooled;
+    }
+
+    public OrderBuilder setSpicy(Boolean spicy) {
+        this.spicy = spicy;
+        return this;
+    }
+
+    public OrderBuilder setCooled(Boolean cooled) {
+        this.cooled = cooled;
+        return this;
+    }
+
+    public OrderBuilder(String food, String drink, Integer count) {
+        this.food = food;
+        this.drink = drink;
+        this.count = count;
+    }
+
+    public Order build() {
+        return new Order(this);
     }
 }
