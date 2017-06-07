@@ -1,4 +1,4 @@
-package com.clayoverwind.designpattern.structure.strategy;
+package com.clayoverwind.designpattern.action.strategy;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.clayoverwind.designpattern.structure.templatemethod;
+package com.clayoverwind.designpattern.action.templatemethod;
 
 import org.junit.Test;
 
