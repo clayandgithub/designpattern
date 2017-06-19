@@ -7,7 +7,7 @@ import org.junit.Test;
  * @version 2017/6/19
  * @E-mail clayanddev@163.com
  */
-public class Interpreter {
+public class InterpreterTest {
 
     @Test
     public void test() {
